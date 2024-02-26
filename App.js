@@ -1,17 +1,45 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-const parent = React.createElement("div", { id: "parent" }, [React.createElement("div", { id: "child" },
-    [React.createElement("h1", { id: "heading1" }, "I M heading1🔥"),
-    React.createElement("h2", { id: "heading2" }, "I M heading2")]
-),
-React.createElement("div", { id: "child2" },
-    [React.createElement("h1", { id: "heading1" }, "I M heading1"),
-    React.createElement("h2", { id: "heading2" }, "I M heading2")]
-)]
+const heading = React.createElement(
+  "h1",
+  { id: "heading" },
+  "Swaneet is Coding 🔥"
 );
 
+//jsx - not not part of react or HTML it is different syntax (both react element and JSX are same objects)
+//This is React Element
+const jsxHeading = (
+   <h1 className="head" tabIndex="5">
+    Swaneet is coding in jsx 🔥
+  </h1>
+);
 
- const root = ReactDOM.createRoot(document.getElementById("root"));
+//This is functional component(React Component)
+const Title = ()=>{
+  return <h1 className="head" tabIndex="5">
+    This is function component 🔥
+  </h1>
+};
 
- root.render(parent);
+const data = 1000;
+
+//This is component Composition ( one component inside another like below used Title), multiple ways
+// {} use when you need any javascript code inside JSX
+const FunctionalHeading = () => (
+  <div id="container">
+    {jsxHeading}
+    {100+200}
+    <div>{data}</div>
+    <Title/>
+    {Title()}
+    <Title></Title>
+    <h1 className="head" tabIndex="5">
+      Swaneet is coding in functional component 🔥
+    </h1>
+  </div>
+);
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+root.render(<FunctionalHeading/>);
