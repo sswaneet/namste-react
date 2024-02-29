@@ -12,9 +12,6 @@
     width: 150px;
 }
 
-.nav-items {
-    
-}
 
 .nav-items > ul{
     display: flex;
@@ -55,4 +52,12 @@ h4 {
 .restaurantcard-container{
     display: flex;
     flex-wrap: wrap;
+}
+
+.filter-container{
+    margin:20px;
+}
+
+.filter-btn{
+    cursor: pointer;
 }
