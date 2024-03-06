@@ -61,3 +61,41 @@ h4 {
 .filter-btn{
     cursor: pointer;
 }
+
+.shimmer-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.shimmer-restcard{
+    width: 200px;
+    height: 400px;
+    padding: 5px;
+    margin: 5px;
+    background-color: #f0f0f0; 
+ 
+    animation: skeleton-loading 1s linear infinite alternate;
+}
+
+@keyframes shimmer{
+    from {
+        transform: translateX(-200%);
+    }
+    to{
+        transform: translateX(200%);
+    }
+}
+  
+@keyframes skeleton-loading {
+    0% {
+      background-color: hsl(200, 20%, 80%);
+    }
+    100% {
+      background-color: hsl(200, 20%, 95%);
+    }
+}
+
+.btnLogin{
+    margin-right: 15px;
+    cursor: pointer;
+}
