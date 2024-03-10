@@ -99,3 +99,51 @@ h4 {
     margin-right: 15px;
     cursor: pointer;
 }
+
+
+.menu-container {
+    max-width: 800px;
+    min-height: 800px;
+    margin: 30px auto 0;
+}
+
+.link-restro
+{
+    text-decoration:none;
+    color: black
+}
+
+.link-restro-card
+{
+    text-decoration:none;
+    color: black
+}
+
+.link-restro:hover{
+    color: goldenrod;
+}
+
+.menu-item{
+    width: 500px;   
+    height: 20px;
+    padding: 70px;
+    margin: 5px;
+    list-style-type: none;
+}
+
+.divider-line
+{
+    border-bottom: 0.5px solid #d3d3d3;
+    height: 0.5px;
+    padding: 5px;
+}
+
+.footer-container {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: red;
+    color: white;
+    text-align: center;
+  }
