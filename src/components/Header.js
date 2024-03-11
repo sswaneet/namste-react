@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { appLogoURL } from "../utils/constants";
+import { appLogoURL, cartCount } from "../utils/constants";
 import { Link } from "react-router-dom";
 
 const Header = () => {
@@ -25,7 +25,7 @@ const Header = () => {
           <li>
             <Link to="/contact" className="link-restro">Contact</Link>
           </li>
-          <li>Cart</li>
+          <li>Cart ()</li>
           <button
             className="btnLogin"
             onClick={() => {

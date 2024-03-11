@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 import { useParams } from "react-router-dom";
-import { menuAPI } from "../utils/constants";
+import  {  menuAPI } from "../utils/constants";
 
 const RestaurantMenu = () => {
   const [restaurantInfo, setRestaurantInfo] = useState(null);
@@ -36,14 +36,14 @@ const RestaurantMenu = () => {
       {
         <div>
           {itemCards?.map((item) => (
-            // <div className="menu-item">
                 <div className="menu-item" key={item.card.info.id}>
+                  <div>
                     <h3> {item.card.info.name}</h3>
                     <h5>{item.card.info.price / 100 || item.card.info.defaultPrice / 100}</h5>
                     <p>{item.card.info.description}</p>
                     <div className="divider-line"/>
+                  </div>
                 </div>
-            // </div>
           ))}
         </div>
       }

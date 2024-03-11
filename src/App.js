@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 import Body from "./components/Body";
@@ -12,9 +12,9 @@ import RestaurantMenu from "./components/RestaurantMenu";
 const AppContainer = () => {
   return (
     <div>
-      <Header></Header>
+      <Header/> 
       <Outlet/>
-      <Footer></Footer>
+      <Footer/>
     </div>
   );
 };
