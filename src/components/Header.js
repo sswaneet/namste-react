@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { appLogoURL, cartCount } from "../utils/constants";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus";
 
 const Header = () => {
   const [btnLogin, setbtnLogin] = useState("Login");
@@ -9,6 +10,8 @@ const Header = () => {
     console.log("header randered");
   }, [btnLogin]);
 
+  const onlineStatus = useOnlineStatus();
+
   return (
     <div id="header-container" className="header-container">
       <div className="logo-container">
@@ -16,6 +19,9 @@ const Header = () => {
       </div>
       <div className="nav-items">
         <ul>
+          <li>
+            Online Status: {onlineStatus == true ? "🟢" :"🔴"}
+          </li>
           <li>
             <Link to="/" className="link-restro">Home</Link>
           </li>

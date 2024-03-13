@@ -149,5 +149,15 @@ h4 {
   .user-card{
     padding: 20px;
     margin: 5px;
+  }
+
+  .user-card-container{
+    display: flex;
+    padding: 20px;
+    margin: 5px;
     border: 0.5px solid black;
+  }
+
+  .avatar-image{
+    height: 4cm;
   }
